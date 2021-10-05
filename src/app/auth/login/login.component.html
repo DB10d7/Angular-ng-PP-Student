@@ -1,6 +1,4 @@
-<!--
-
-    <div class="container">
+  <div class="container">
     <div class="row mt-5">
       <div class="col-md-4 offset-md-4">
         <div class="card">
@@ -9,17 +7,16 @@
             <h5>Login Page</h5>
           </div>
           <div class="card-body text-center">
-            <form class="register" [formGroup]="registerForm" >
+            <form class="login" [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
               <div class="mb-4">
                 <label for="exampleInputEmail1" class="form-label">
-                  Enter Your Email address</label>
+                  Enter Your UserName</label>
                 <input
-                  type="email"
+                  type="text"
                   
                   class="form-control"
                   id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  name="email"
+                  [formControlName]="'username'"
                   required="required"
                 />
               </div>
@@ -29,8 +26,7 @@
                 <input
                   type="password"
                   class="form-control"
-                  id="exampleInputPassword1"
-                  name="password"
+                  [formControlName]="'password'"
                   required="required"
                 />
               </div>
@@ -45,4 +41,3 @@
   </div>
 
 
--->
