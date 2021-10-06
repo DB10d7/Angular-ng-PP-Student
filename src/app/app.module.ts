@@ -10,6 +10,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxWebstorageModule } from 'ngx-webstorage';
+import { HomeComponent } from './home/home.component';
+import { AddStudentComponent } from './add-student/add-student.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
     HeaderComponent,
     RegisterComponent,
     LoginComponent,
-    RegisterSuccessComponent
+    RegisterSuccessComponent,
+    HomeComponent,
+    AddStudentComponent
   ],
   imports: [
     BrowserModule,
