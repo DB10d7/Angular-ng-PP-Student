@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mt-5">
+            <div class="card">
+                <div class="card-header text-center">
+                    <li class="fa fa-graduation-cap fa-3x"></li>
+                    <h5>Student List</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">User_Name</th>
+                            <th scope="col">Batch</th>
+                            <th scope="col">Student Name</th>
+                            <th scope="col">Student Details</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let student of listStudent">
+                            <th>{{student.studentId}}</th>
+                            <th>{{student.studentName}}</th>
+                            <th>{{student.batch}}</th>
+                            <th>{{student.name}}</th>
+                            <th><button (click)="studentDetails(student.studentId)" type="button"class="btn btn-primary">Details</button></th>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

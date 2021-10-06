@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
-import { AuthService } from '../auth/auth.service'; 
-
+import { StudentServiceService } from '../student-service.service';
 import {Router} from '@angular/router';
-import { StudentPayload } from '../auth/student-payload';
+import { StudentPayload } from '../student-payload';
 
 
 @Component({
@@ -16,7 +15,7 @@ export class AddStudentComponent implements OnInit {
   addStudentForm:any= FormGroup;
   studentPayload: StudentPayload;
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, private router:Router) {
+  constructor(private formBuilder: FormBuilder, private studentService: StudentServiceService , private router:Router) {
     this.addStudentForm = this.formBuilder.group({
       studentName: '',
       studentEmail: '',
@@ -52,7 +51,7 @@ export class AddStudentComponent implements OnInit {
     this.studentPayload.batch= this.addStudentForm.get('batch').value;
     this.studentPayload.passOutYear= this.addStudentForm.get('passOutYear').value;
 
-    this.authService.createStudent(this.studentPayload).subscribe(data => {
+    this.studentService.createStudent(this.studentPayload).subscribe(data => {
       console.log('Student Created Successfully');
       this.router.navigateByUrl('/home');
     }, error => {
