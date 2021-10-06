@@ -28,6 +28,7 @@ export class AddStudentComponent implements OnInit {
       passOutYear:0
     });
     this.studentPayload = {
+      studentId:0,
       studentName: '',
       studentEmail: '',
       name:'',
@@ -41,7 +42,7 @@ export class AddStudentComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onSubmit(){
+  addStudent(){
     this.studentPayload.studentName= this.addStudentForm.get('studentName').value;
     this.studentPayload.studentEmail= this.addStudentForm.get('studentEmail').value;
     this.studentPayload.name= this.addStudentForm.get('name').value;
@@ -53,7 +54,7 @@ export class AddStudentComponent implements OnInit {
 
     this.authService.createStudent(this.studentPayload).subscribe(data => {
       console.log('Student Created Successfully');
-      //this.router.navigateByUrl('/register-success');
+      this.router.navigateByUrl('/home');
     }, error => {
       console.log('Student Creation Failed');
     });

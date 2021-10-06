@@ -21,7 +21,7 @@ export class AuthService {
     return this.httpClient.post(this.urlAdmin + 'signup', registerPayload);
   }
   createStudent(studentPayload: StudentPayload): Observable<any> {
-    return this.httpClient.post(this.urlStudent + 'create', studentPayload);
+    return this.httpClient.post('http://localhost:8080/api/student/create', studentPayload);
   }
   login(loginPayload: LoginPayload): Observable<boolean> {
     return this.httpClient.post<JwtAuthResponse>(this.urlAdmin + 'login', loginPayload).pipe(map(data => {

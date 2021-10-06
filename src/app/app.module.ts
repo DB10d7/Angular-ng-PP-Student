@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxWebstorageModule } from 'ngx-webstorage';
 import { HomeComponent } from './home/home.component';
 import { AddStudentComponent } from './add-student/add-student.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientInterceptor } from './http-client-interceptor';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,7 @@ import { AddStudentComponent } from './add-student/add-student.component';
     HttpClientModule,
     NgxWebstorageModule.forRoot()
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
