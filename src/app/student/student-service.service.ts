@@ -21,4 +21,8 @@ export class StudentServiceService {
   updateStudent(studentPayload: StudentPayload): Observable<any> {
     return this.http.post('http://localhost:8080/api/student/update', studentPayload);
   }
+  studentDetails(id:number){
+    console.log(this.http.get("http://localhost:8080/api/student/get/"+id));
+    return this.http.get<any>("http://localhost:8080/api/student/get/"+id);
+  }
 }

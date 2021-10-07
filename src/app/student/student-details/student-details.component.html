@@ -1,1 +1,29 @@
-<p>student-details works!</p>
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6 mt-5">
+            <div class="card">
+                <div class="card-header text-center">
+                    <li class="fa fa-graduation-cap fa-3x"></li>
+                    <h5>Student Details</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <tbody>
+                            <tr><th>Student ID </th> : <th>  {{studentDetail.studentId}}</th></tr>
+                            <tr><th>Student UserName </th>: <th> {{studentDetail.studentName}}</th></tr>
+                            <tr><th>Student Name</th> : <th>  {{studentDetail.name}}</th></tr>
+                            <tr><th>Student EmailId</th> : <th> {{studentDetail.studentEmail}} </th></tr>
+                            <tr><th>Batch</th> : <th>  {{studentDetail.batch}}</th></tr>
+                            <tr><th>Father's Name</th> : <th>  {{studentDetail.fatherName}}</th></tr>
+                            <tr><th>Student Age</th> : <th>  {{studentDetail.age}}</th></tr>
+                            <tr><th>Student Mobile Number</th> : <th>  {{studentDetail.number}}</th></tr>
+                            <tr><th>Pass Out Year</th> : <th>  {{studentDetail.passOutYear}}</th></tr>
+                            <tr><th>Update Student Details</th> : <th> <button type="button" class="btn btn-primary">Update</button></th></tr>
+                            <tr><th>Delete Student Details</th> : <th> <button type="button" class="btn btn-danger">Delete</button></th></tr>
+                        </tbody>
+                      </table>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
