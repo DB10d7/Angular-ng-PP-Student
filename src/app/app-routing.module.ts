@@ -6,6 +6,7 @@ import { RegisterSuccessComponent } from './auth/register-success/register-succe
 import { RegisterComponent } from './auth/register/register.component';
 import { HomeComponent } from './home/home.component';
 import { StudentListComponent } from './student/student-list/student-list.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
 
@@ -13,10 +14,10 @@ const routes: Routes = [
     path:"home", component: HomeComponent
   },
   {
-    path:"studentList", component: StudentListComponent
+    path:"studentList", component: StudentListComponent , canActivate: [AuthGuard]
   },
   {
-    path:"add-student", component: AddStudentComponent
+    path:"add-student", component: AddStudentComponent , canActivate: [AuthGuard]
   },
   {
     path:"login", component: LoginComponent
@@ -26,8 +27,7 @@ const routes: Routes = [
   },
   {
     path:"register-success", component: RegisterSuccessComponent
-  }
-  
+  } 
 
 ];
 

@@ -22,7 +22,7 @@ export class StudentListComponent implements OnInit {
       })
 
   }
-  studentDetials(id:number) {
+  studentDetails(id:number) {
     this.router.navigate(['studentDetails',id]);
   }
 

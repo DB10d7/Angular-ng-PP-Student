@@ -17,6 +17,7 @@ import { HttpClientInterceptor } from './http-client-interceptor';
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { StudentDetailsComponent } from './student/student-details/student-details.component';
 import { UpdateStudentComponent } from './student/update-student/update-student.component';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
