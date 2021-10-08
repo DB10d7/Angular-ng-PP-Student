@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { AuthGuard } from './auth.guard';
 import { StudentDetailsComponent } from './student/student-details/student-details.component';
+import { UpdateStudentComponent } from './student/update-student/update-student.component';
 
 const routes: Routes = [
 
@@ -22,6 +23,9 @@ const routes: Routes = [
   },
   {
     path:"studentDetails/:id", component: StudentDetailsComponent , canActivate: [AuthGuard]
+  },
+  {
+    path:"updateStudent/:id", component: UpdateStudentComponent , canActivate: [AuthGuard]
   },
   {
     path:"login", component: LoginComponent

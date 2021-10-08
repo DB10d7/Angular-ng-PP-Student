@@ -1,4 +1,25 @@
+
 <div class="container">
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Delete Student Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Do You Want to delete the students details?
+        </div>
+        <div class="modal-footer">
+          
+          <button type="button" class="btn btn-danger" (click)="deleteStudent(studentDetail.studentId)" >Delete</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <div class="row justify-content-center align-items-center">
         <div class="col-md-6 mt-5">
             <div class="card">
@@ -18,8 +39,13 @@
                             <tr><th>Student Age</th> : <th>  {{studentDetail.age}}</th></tr>
                             <tr><th>Student Mobile Number</th> : <th>  {{studentDetail.number}}</th></tr>
                             <tr><th>Pass Out Year</th> : <th>  {{studentDetail.passOutYear}}</th></tr>
-                            <tr><th>Update Student Details</th> : <th> <button type="button" class="btn btn-primary">Update</button></th></tr>
-                            <tr><th>Delete Student Details</th> : <th> <button type="button" class="btn btn-danger">Delete</button></th></tr>
+                            <tr><th>Update Student Details</th> : <th> <button type="button" (click)="updateStudent(studentDetail.studentId)" class="btn btn-primary">Update</button></th></tr>
+                            <tr><th>Delete Student Details</th> : <th><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+                              Delete
+                            </button>
+                                                      <!-- Modal -->
+                           
+                          </th></tr>
                         </tbody>
                       </table>
                 </div>

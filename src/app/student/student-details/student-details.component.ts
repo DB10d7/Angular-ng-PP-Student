@@ -23,5 +23,13 @@ export class StudentDetailsComponent implements OnInit {
       console.log(this.studentDetail);
     })
   }
-
+  deleteStudent(id:number){
+    this.studentService.deleteStudent(id).subscribe((res) => {
+      console.log("data is here",res);
+      this.router.navigateByUrl('/studentList');
+    });
+  }
+  updateStudent(id:number){
+    this.router.navigate(['/updateStudent',id]);
+  }
 }

@@ -19,10 +19,14 @@ export class StudentServiceService {
     return this.http.get<any>(this.url + "all");
   }
   updateStudent(studentPayload: StudentPayload): Observable<any> {
-    return this.http.post('http://localhost:8080/api/student/update', studentPayload);
+    return this.http.put('http://localhost:8080/api/student/update', studentPayload);
   }
   studentDetails(id:number){
     console.log(this.http.get("http://localhost:8080/api/student/get/"+id));
     return this.http.get<any>("http://localhost:8080/api/student/get/"+id);
   }
+  deleteStudent(id:number): Observable<any>{
+    return this.http.delete("http://localhost:8080/api/student/delete/"+id);
+  }
+  
 }

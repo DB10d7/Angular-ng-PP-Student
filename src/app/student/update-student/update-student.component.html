@@ -1,1 +1,115 @@
-<p>update-student works!</p>
+<div class="container">
+    <div class="row mt-5 justify-content-center allign-item-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header text-center">
+            <li class="fa fa-graduation-cap fa-3x"></li>
+            <h5>Add Student</h5>
+          </div>
+          <div class="card-body text-center">
+            <form class="updateStudentForm" [formGroup]="updateStudentForm" (ngSubmit)="updateStudent()" >
+              <div class="mb-4">
+                <label for="exampleInputEmail1" class="form-label">
+                  Enter Your UserName</label>
+                <input
+                  type="text"
+                  
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  [formControlName]="'studentName'"
+                  required="required"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="exampleInputEmail1" class="form-label"
+                  > Enter Your Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  [formControlName]="'studentEmail'"
+                  required="required"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="exampleInputEmail1" class="form-label">
+                  Enter Your Name</label>
+                <input
+                  type="text"
+                  
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  [formControlName]="'name'"
+                  required="required"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="exampleInputEmail1" class="form-label">
+                  Enter Your Father's Name</label>
+                <input
+                  type="text"
+                  
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  [formControlName]="'fatherName'"
+                  required="required"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="exampleInputEmail1" class="form-label">
+                  Enter Your Age</label>
+                <input
+                  type="number"
+                  
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  [formControlName]="'age'"
+                  required="required"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="exampleInputEmail1" class="form-label">
+                  Enter Your Number</label>
+                <input
+                  type="number"
+                  
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  [formControlName]="'number'"
+                  required="required"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="exampleInputEmail1" class="form-label">
+                  Enter Your Batch</label>
+                <input
+                  type="text"
+                  
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  [formControlName]="'batch'"
+                  required="required"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="exampleInputEmail1" class="form-label">
+                  Enter Your Pass Out Year</label>
+                <input
+                  type="number"
+                  
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  [formControlName]="'passOutYear'"
+                  required="required"
+                />
+              </div>
+              <button type="submit" class="btn btn-success btn-block">
+                Update
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -53,7 +53,7 @@ export class AddStudentComponent implements OnInit {
 
     this.studentService.createStudent(this.studentPayload).subscribe(data => {
       console.log('Student Created Successfully');
-      this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/studentList');
     }, error => {
       console.log('Student Creation Failed');
     });
